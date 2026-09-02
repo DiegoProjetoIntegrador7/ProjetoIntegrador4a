@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './exercicio2.html',
   styleUrl: './exercicio2.css',
 })
-export class Exercicio2 {}
+export class Exercicio2 {
+  produto = 'Teclado';
+  preco = 150;
+  quantidade = 3;
+}
