@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './exercicio5.html',
   styleUrl: './exercicio5.css',
 })
-export class Exercicio5 {}
+export class Exercicio5 {
+  nomes = ['Diego', 'Bruno', 'Carlos', 'Davi', 'Miguel'];
+}

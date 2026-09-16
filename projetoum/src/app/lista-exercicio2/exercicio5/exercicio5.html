@@ -1,1 +1,8 @@
-<p>exercicio5 works!</p>
+<div *ngFor="let nome of nomes; let i = index; let primeiro = first; let ultimo = last">
+
+  {{ i + 1 }} {{ nome }}
+
+  <span *ngIf="primeiro"> Primeiro da lista</span>
+  <span *ngIf="ultimo"> Último da lista</span>
+
+</div>
