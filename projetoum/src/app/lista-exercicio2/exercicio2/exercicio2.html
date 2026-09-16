@@ -1,0 +1,11 @@
+<button (click)="alternarLogin()">
+  {{ usuarioLogado ? 'Sair' : 'Entrar' }}
+</button>
+
+<div *ngIf="usuarioLogado;
+else naoAutorizado">
+<p>Usuário autenticado</p>
+</div>
+<ng-template #naoAutorizado>
+<p>Acesso não autorizado</p>
+</ng-template>
