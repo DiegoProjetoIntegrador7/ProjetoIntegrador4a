@@ -1,0 +1,15 @@
+.par {
+  background-color: lightblue;
+}
+
+.impar {
+  background-color: lightgreen;
+}
+
+.primeira {
+  font-weight: bold;
+}
+
+.ultima {
+  border: 2px solid red;
+}

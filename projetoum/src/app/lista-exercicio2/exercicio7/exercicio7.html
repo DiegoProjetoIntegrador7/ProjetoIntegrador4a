@@ -1,1 +1,11 @@
-<p>exercicio7 works!</p>
+<div *ngFor="let disciplina of disciplinas; let i = index; let par = even; let impar = odd"
+     [ngClass]="{
+       'par': par,
+       'impar': impar,
+       'primeira': i === 0,
+       'ultima': i === disciplinas.length - 1
+     }">
+
+  {{ disciplina }}
+
+</div>

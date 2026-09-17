@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './exercicio7.html',
   styleUrl: './exercicio7.css',
 })
-export class Exercicio7 {}
+export class Exercicio7 {
+  disciplinas = [
+    'Programação',
+    'Banco de Dados',
+    'Desenvolvimento Web',
+    'Estrutura de Dados',
+    'Redes de Computadores',
+    'Sistemas Operacionais'
+  ];
+}
