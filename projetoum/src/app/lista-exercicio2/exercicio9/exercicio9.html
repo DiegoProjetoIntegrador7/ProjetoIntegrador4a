@@ -1,1 +1,19 @@
-<p>exercicio9 works!</p>
+<div *ngFor="let produto of produtos">
+
+  <p>{{ produto.nome }}</p>
+
+  <p>Quantidade: {{ produto.quantidade }}</p>
+
+  <p [ngClass]="{
+    'vermelho': produto.quantidade === 0,
+    'amarelo': produto.quantidade >= 1 && produto.quantidade <= 5,
+    'verde': produto.quantidade > 5
+  }">
+
+    <p *ngIf="produto.quantidade === 0">Sem estoque</p>
+    <p *ngIf="produto.quantidade >= 1 && produto.quantidade <= 5">Estoque baixo</p>
+    <p *ngIf="produto.quantidade > 5">Estoque disponível</p>
+
+  </p>
+
+</div>
