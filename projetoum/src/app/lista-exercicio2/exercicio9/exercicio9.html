@@ -4,16 +4,10 @@
 
   <p>Quantidade: {{ produto.quantidade }}</p>
 
-  <p [ngClass]="{
-    'vermelho': produto.quantidade === 0,
-    'amarelo': produto.quantidade >= 1 && produto.quantidade <= 5,
-    'verde': produto.quantidade > 5
-  }">
+  <p *ngIf="produto.quantidade === 0" [ngClass]="'vermelho'">Sem estoque</p>
 
-    <p *ngIf="produto.quantidade === 0">Sem estoque</p>
-    <p *ngIf="produto.quantidade >= 1 && produto.quantidade <= 5">Estoque baixo</p>
-    <p *ngIf="produto.quantidade > 5">Estoque disponível</p>
+  <p *ngIf="produto.quantidade >= 1 && produto.quantidade <= 5" [ngClass]="'amarelo'">Estoque baixo</p>
 
-  </p>
+  <p *ngIf="produto.quantidade > 5" [ngClass]=" 'verde'">Estoque disponível</p>
 
 </div>
