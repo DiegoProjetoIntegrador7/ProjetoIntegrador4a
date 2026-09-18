@@ -1,1 +1,21 @@
-<p>exercicio11 works!</p>
+<button (click)="somenteDisponiveis = false">Mostrar todos</button>
+
+<button (click)="somenteDisponiveis = true">Mostrar disponíveis</button>
+
+<br><br>
+
+<ng-container *ngFor="let produto of produtos">
+
+  <div *ngIf="!somenteDisponiveis || produto.quantidade > 0">
+
+    <p>{{ produto.nome }}</p>
+
+    <p>Preço: {{ produto.preco | currency:'BRL' }}</p>
+
+    <p>Quantidade: {{ produto.quantidade }}</p>
+
+    <hr>
+
+  </div>
+
+</ng-container>
