@@ -28,9 +28,9 @@ const routes: Routes = [
   {path: 'exercicio9', component: Exercicio9},
   {path: 'exercicio10', component: Exercicio10},
   {path: 'exercicio11', component: Exercicio11},
-  {path: 'exercicio8', component: Exercicio12},
-  {path: 'exercicio9', component: Exercicio13},
-  {path: 'exercicio10', component: Exercicio14},
+  {path: 'exercicio12', component: Exercicio12},
+  {path: 'exercicio13', component: Exercicio13},
+  {path: 'exercicio14', component: Exercicio14},
   {path: 'DesafioFinal', component: DesafioFinal},
 ];
 
