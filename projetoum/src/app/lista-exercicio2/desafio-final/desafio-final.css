@@ -1,0 +1,19 @@
+.planejamento {
+  border-left: 5px solid gray;
+  padding-left: 10px;
+}
+
+.desenvolvimento {
+  border-left: 5px solid blue;
+  padding-left: 10px;
+}
+
+.testes {
+  border-left: 5px solid orange;
+  padding-left: 10px;
+}
+
+.concluido {
+  border-left: 5px solid green;
+  padding-left: 10px;
+}

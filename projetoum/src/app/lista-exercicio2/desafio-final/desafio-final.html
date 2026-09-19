@@ -1,1 +1,65 @@
-<p>desafio-final works!</p>
+<h2>Painel de Projetos</h2>
+
+<p>Total de projetos: {{ projetos.length }}</p>
+
+<p>Projetos concluídos: {{ quantidadeConcluidos() }}</p>
+
+<button (click)="mostrarConcluidos = !mostrarConcluidos">Mostrar / Ocultar concluídos</button>
+
+<hr>
+
+@if (projetos.length === 0) {
+
+  <p>Não existem projetos cadastrados.</p>
+
+} 
+@else {
+
+  @for (projeto of projetos; track projeto.id; let i = $index) {
+
+    @if (mostrarConcluidos || projeto.status !== 'concluído') {
+
+      <div
+        [class.planejamento]="projeto.status === 'planejamento'"
+        [class.desenvolvimento]="projeto.status === 'desenvolvimento'"
+        [class.testes]="projeto.status === 'testes'"
+        [class.concluido]="projeto.status === 'concluído'">
+
+        <p>Projeto {{ i + 1 }}</p>
+
+        <p>Título: {{ projeto.titulo }}</p>
+
+        <p>Equipe: {{ projeto.equipe }}</p>
+
+        <p>Status: {{ projeto.status }}</p>
+
+        @if (projeto.nota === null) {
+          <p>Nota ainda não definida</p>
+        } @else {
+          <p>Nota: {{ projeto.nota }}</p>
+        }
+
+        @if (projeto.entregue) {
+          <p>Projeto entregue</p>
+        }
+
+        @if (projeto.nota !== null && projeto.nota >= 7) {
+          <p>Projeto com nota igual ou superior a 7</p>
+        }
+
+        @if (projeto.nota !== null && projeto.nota < 6) {
+          <p>Projeto com nota inferior a 6</p>
+        }
+
+        <button (click)="alterarStatus(projeto)">Alterar status</button>
+
+      </div>
+
+      <hr>
+
+    }
+  }
+  @empty {
+    <p>Não existem projetos cadastrados.</p>
+  }
+}
