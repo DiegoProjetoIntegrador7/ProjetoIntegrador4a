@@ -6,4 +6,20 @@ import { Component } from '@angular/core';
   templateUrl: './exercicio14.html',
   styleUrl: './exercicio14.css',
 })
-export class Exercicio14 {}
+export class Exercicio14 {
+
+  exibir: boolean = false;
+
+  usuarioLogado: boolean = false;
+
+  nomes = ['Diego', 'Bruno', 'Carlos', 'Davi', 'Miguel'];
+
+  alternarMensagem() {
+    this.exibir = !this.exibir;
+  }
+
+  alternarLogin() {
+    this.usuarioLogado = !this.usuarioLogado;
+  }
+
+}

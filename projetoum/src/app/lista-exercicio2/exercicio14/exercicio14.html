@@ -1,1 +1,43 @@
-<p>exercicio14 works!</p>
+<h2>Exercício 14</h2>
+
+<h3>Exercício 1 Refeito</h3>
+
+<button (click)="alternarMensagem()">Mostrar ou ocultar mensagem.</button>
+
+@if (exibir) {
+  <p>Bem-vindo ao sistema</p>
+}
+
+<hr>
+
+<h3>Exercício 2 Refeito</h3>
+
+<button (click)="alternarLogin()">{{ usuarioLogado ? 'Sair' : 'Entrar' }}</button>
+
+@if (usuarioLogado) {
+  <p>Usuário autenticado</p>
+} @else {
+  <p>Acesso não autorizado</p>
+}
+
+<hr>
+
+<h3>Exercício 5 Refeito</h3>
+
+@for (nome of nomes; track nome; let i = $index; let primeiro = $first; let ultimo = $last) {
+
+  <div>
+    {{ i + 1 }} {{ nome }}
+
+    @if (primeiro) {
+      <span> Primeiro da lista</span>
+    }
+
+    @if (ultimo) {
+      <span> Último da lista</span>
+    }
+  </div>
+
+} @empty {
+  <p>Nenhum nome cadastrado.</p>
+}
